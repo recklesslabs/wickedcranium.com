@@ -123,7 +123,7 @@ export const frontpageCards: CardContent[] = [
   {
     "titleString": "Music and Art Collabs & Derivatives",
     "contentString": "We have started talking to a host of artists! We will partner will small and big artists alike to build the community and build the brand further. If you know anyone, who would like to collab with us or could get us an intro please let us know.",
-    "bannerPicLink": "assets/colllabs-and-derivatives.png",
+    "bannerPicLink": "assets/collabs-and-derivatives.png",
     "craniumNumber": "13.png"
   },
   {
