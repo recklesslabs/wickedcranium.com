@@ -26,7 +26,7 @@ export class StallionMintingComponent implements OnInit {
 
   async redeemOne() {
     this.contractService.getTokens().then(tokens => {
-      if(tokens.length > 1) {
+      if(tokens.length >= 1) {
         let index = tokens.indexOf(parseInt(this.unclaimedCraniumNumber))
         if(index === -1) {
           this.transaction = "That cranium # is not in your wallet"
@@ -61,7 +61,7 @@ export class StallionMintingComponent implements OnInit {
   }
   async signTransaction() {
     this.contractService.getTokens().then(tokens => {
-      if(tokens.length > 1) {
+      if(tokens.length >= 1) {
         this.contractService.signTransaction(0, tokens.length).then(res => {
           this.transaction = res
         })
