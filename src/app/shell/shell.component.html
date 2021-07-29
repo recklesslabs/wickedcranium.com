@@ -5,7 +5,7 @@
         [opened]="false">
       <mat-toolbar>Menu</mat-toolbar>
       <mat-nav-list>
-        <!-- <a mat-list-item routerLink="/mint-stallions" (click)="drawer.close()">Mint Stallions</a> -->
+        <a mat-list-item routerLink="/mint-stallions" (click)="drawer.close()">Mint Stallions</a>
         <a mat-list-item href="https://opensea.io/collection/thewickedcraniums" (click)="drawer.close()">OpenSea</a>
         <a mat-list-item href="https://twitter.com/WickedCraniums?ref_src=twsrc%5Etfw" (click)="drawer.close()">Twitter</a>
         <a mat-list-item href="https://discord.gg/wickedcraniums" (click)="drawer.close()">Discord</a>
@@ -26,8 +26,8 @@
   
         <span class="fill-space"></span>
         <div *ngIf="!(isHandset$ | async)">
-          <!-- <a disabled style="background: rgb(46, 93, 134);" mat-raised-button routerLink="/mint-stallions">Mint Stallions</a>
-          &nbsp; -->
+          <a  style="background: rgb(46, 93, 134);" mat-raised-button routerLink="/mint-stallions">Mint Stallions</a>
+          &nbsp;
           <a target="_blank" style="background: rgb(134, 49, 46);" mat-raised-button href="https://opensea.io/collection/thewickedcraniums">OpenSea</a>
           &nbsp;
           <a target="_blank" style="background: rgb(134, 49, 46);" mat-raised-button href="https://twitter.com/WickedCraniums?ref_src=twsrc%5Etfw">Twitter</a>
