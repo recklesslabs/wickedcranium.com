@@ -1,2 +1,3 @@
 # wickedcranium.com
-wickedcranium.com
+
+[wickedcranium.com](https://wickedcranium.com)
