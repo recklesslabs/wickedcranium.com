@@ -9,3 +9,4 @@ Angular + Angular Material was used to build this.
 - Show how users may add their own cards.
 
 - Link recklesslabs Github from the website
+- Resize and compress images in assets/
