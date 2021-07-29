@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/wickedcranium",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
