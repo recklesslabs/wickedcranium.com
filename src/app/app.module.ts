@@ -15,6 +15,12 @@ import { AngularFireModule } from '@angular/fire';
 import { ShellComponent } from './shell/shell.component';
 import { HomePageCardsComponent } from './home-page-cards/home-page-cards.component';
 import { StallionMintingComponent } from './stallion-minting/stallion-minting.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import {MatSliderModule} from '@angular/material/slider';
+
 
 let firebaseConfig = {
   apiKey: "AIzaSyBRuNymNlCTkBFj7ipD9iPtjbAHFtWWOQQ",
@@ -36,11 +42,16 @@ let firebaseConfig = {
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatFormFieldModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
+    MatSliderModule,
     FlexLayoutModule,
+    FormsModule,
     MatMenuModule,
+    MatGridListModule,
+    MatInputModule,
     MatIconModule,
     AngularFireModule.initializeApp(firebaseConfig),
     MatToolbarModule,

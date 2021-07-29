@@ -5,7 +5,7 @@ import { StallionMintingComponent } from './stallion-minting/stallion-minting.co
 
 const routes: Routes = [
   { path: '', component: HomePageCardsComponent },
-  { path: 'stallion-minting', component: StallionMintingComponent },
+  { path: 'mint-stallions', component: StallionMintingComponent },
   {path: '**', redirectTo: ''}
 ];
 
