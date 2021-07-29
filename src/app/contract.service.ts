@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import {
   cost,
-  mainnetAbi,
-  mainnetContract,
   rinkebyAbi,
   rinkebyContract,
   rinkebyCraniumAbi,
