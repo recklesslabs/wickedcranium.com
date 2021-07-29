@@ -1,0 +1,28 @@
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let cardObj of cardLst; index as i">
+        <mat-card class="mat-elevation-z24" style="height: 95%;">
+          <mat-card-header>
+            <div mat-card-avatar 
+            style="background-size: cover;"
+            [ngStyle]="{'background-image': 'url(https://raw.githubusercontent.com/recklesslabs/wickedcraniums-300x300/main/' + i + '.png)'}"
+            ></div>
+            <mat-card-title>{{ cardObj.titleString }}</mat-card-title>
+            <mat-card-subtitle>{{ cardObj.subtitleString }}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image [src]="cardObj.bannerPicLink">
+          <mat-card-content>
+            <p>{{ cardObj.contentString }}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <span *ngFor="let buttonObj of cardObj.buttons">
+              <a target="_blank" style="background: rgb(134, 49, 46);" mat-raised-button [href]="buttonObj.buttonLink">
+                {{ buttonObj.buttonName }}
+              </a>
+              &nbsp;  
+            </span>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    </div>

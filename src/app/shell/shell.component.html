@@ -1,0 +1,40 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="false">
+      <mat-toolbar>Menu</mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item href="https://opensea.io/collection/thewickedcraniums" (click)="drawer.close()">OpenSea</a>
+        <a mat-list-item href="https://twitter.com/WickedCraniums?ref_src=twsrc%5Etfw" (click)="drawer.close()">Twitter</a>
+        <a mat-list-item href="https://discord.gg/wickedcraniums" (click)="drawer.close()">Discord</a>
+        <a mat-list-item href="mailto:team@recklesslabs.co" (click)="drawer.close()">Contact</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar>
+        <button 
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span class="logo" routerLink="/">💀 The Wicked Craniums 💀 &nbsp;</span>
+  
+        <span class="fill-space"></span>
+        <div *ngIf="!(isHandset$ | async)">
+          <a target="_blank" style="background: rgb(134, 49, 46);" mat-raised-button href="https://opensea.io/collection/thewickedcraniums">OpenSea</a>
+          &nbsp;
+          <a target="_blank" style="background: rgb(134, 49, 46);" mat-raised-button href="https://twitter.com/WickedCraniums?ref_src=twsrc%5Etfw">Twitter</a>
+          &nbsp;
+          <a target="_blank" style="background: rgb(134, 49, 46);" mat-raised-button href="https://discord.gg/wickedcraniums" mat-button >Discord</a>
+          &nbsp; 
+          <a  href="mailto:team@recklesslabs.co" mat-raised-button  style="background: rgb(134, 49, 46);">Contact</a>
+          &nbsp; &nbsp; &nbsp; &nbsp;
+        </div>
+      </mat-toolbar>
+      <ng-content></ng-content>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

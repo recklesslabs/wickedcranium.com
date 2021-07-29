@@ -12,6 +12,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { AngularFireModule } from '@angular/fire';
+import { ShellComponent } from './shell/shell.component';
+import { HomePageCardsComponent } from './home-page-cards/home-page-cards.component';
+import { StallionMintingComponent } from './stallion-minting/stallion-minting.component';
 
 let firebaseConfig = {
   apiKey: "AIzaSyBRuNymNlCTkBFj7ipD9iPtjbAHFtWWOQQ",
@@ -26,6 +29,9 @@ let firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
+    ShellComponent,
+    HomePageCardsComponent,
+    StallionMintingComponent,
   ],
   imports: [
     BrowserModule,
