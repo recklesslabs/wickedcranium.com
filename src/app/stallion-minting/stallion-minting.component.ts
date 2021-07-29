@@ -8,18 +8,37 @@ import { ContractService } from '../contract.service';
 })
 export class StallionMintingComponent implements OnInit {
 
-  value = 1;
-  min = 1;
-  max = 25;
+  value = Math.floor(Math.random() * (10761 + 1));;
+  min = 0;
+  max = 10761;
   step = 1;
   thumbLabel = true;
   isMetamaskConnected = false;
   metamaskAccount: string = '';
+  tokens: number[] = []
+  unclaimedCraniumNumber = '0'
   transaction: any = 'No transaction/transaction incomplete';
 
   _window(): any {
     // return the global native browser window object
     return window;
+  }
+
+  async redeemOne() {
+    this.contractService.getTokens().then(tokens => {
+      if(tokens.length > 1) {
+        let index = tokens.indexOf(parseInt(this.unclaimedCraniumNumber))
+        if(index === -1) {
+          this.transaction = "That cranium # is not in your wallet"
+        } else {
+        this.contractService.signTransaction(index, 1).then(res => {
+          this.transaction = res
+        })
+        }
+      } else {
+        this.transaction = "Looks like you don't have any Craniums in wallet"
+      }
+    })
   }
 
   constructor(public contractService: ContractService) {}
@@ -32,18 +51,45 @@ export class StallionMintingComponent implements OnInit {
     // }
   }
 
-  connectMetamaskMethod(): void {
-    // UNCOMMENT
-    // this.contractService.connectMetamask().then((resp: any) => {
-    //   if (typeof resp === 'string') {
-    //     this.isMetamaskConnected = true;
-    //     this.metamaskAccount = shortenAccount(resp);
-    //   }
-    // });
+  async connectMetamaskMethod() {
+    this.contractService.connectMetamask().then((resp: any) => {
+      if (typeof resp === 'string') {
+        this.isMetamaskConnected = true;
+        this.metamaskAccount = shortenAccount(resp);
+      }
+    });
   }
   async signTransaction() {
-    // UNCOMMENT
-    // this.transaction = await this.contractService.signTransaction(this.value);
+    this.contractService.getTokens().then(tokens => {
+      if(tokens.length > 1) {
+        this.contractService.signTransaction(0, tokens.length).then(res => {
+          this.transaction = res
+        })
+      } else {
+        this.transaction = "Looks like you don't have any Craniums in wallet"
+      }
+      
+    })
+    
+  }
+
+  getTokens() {
+    this.contractService.getTokens().then(tokens => {
+      alert(`[${tokens.join(", ")}]`)
+    })
+  }
+
+  async checkRedeemable() {
+    const res = await this.contractService.isRedeemable(this.value);
+    if(typeof res === "boolean") {
+      if(res) {
+        this.transaction = "That Cranium has already redeemed a Stallion"
+      } else {
+        this.transaction = "That Cranium has not redeemed a Stallion yet"
+      }
+    } else {
+      this.transaction = res
+    }
   }
 }
 
