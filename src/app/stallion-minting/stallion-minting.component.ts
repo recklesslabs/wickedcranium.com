@@ -4,19 +4,18 @@ import { ContractService } from '../contract.service';
 @Component({
   selector: 'app-stallion-minting',
   templateUrl: './stallion-minting.component.html',
-  styleUrls: ['./stallion-minting.component.scss']
+  styleUrls: ['./stallion-minting.component.scss'],
 })
 export class StallionMintingComponent implements OnInit {
-
-  value = Math.floor(Math.random() * (10761 + 1));;
+  value = Math.floor(Math.random() * (10761 + 1));
   min = 0;
   max = 10761;
   step = 1;
   thumbLabel = true;
   isMetamaskConnected = false;
   metamaskAccount: string = '';
-  tokens: number[] = []
-  unclaimedCraniumNumber = '0'
+  tokens: number[] = [];
+  unclaimedCraniumNumber = '0';
   transaction: any = 'No transaction/transaction incomplete';
 
   _window(): any {
@@ -25,20 +24,20 @@ export class StallionMintingComponent implements OnInit {
   }
 
   async redeemOne() {
-    this.contractService.getTokens().then(tokens => {
-      if(tokens.length >= 1) {
-        let index = tokens.indexOf(parseInt(this.unclaimedCraniumNumber))
-        if(index === -1) {
-          this.transaction = "That cranium # is not in your wallet"
+    this.contractService.getTokens().then((tokens) => {
+      if (tokens.length >= 1) {
+        let index = tokens.indexOf(parseInt(this.unclaimedCraniumNumber));
+        if (index === -1) {
+          this.transaction = 'That cranium # is not in your wallet';
         } else {
-        this.contractService.signTransaction(index, 1).then(res => {
-          this.transaction = res
-        })
+          this.contractService.signTransaction(index, 1).then((res) => {
+            this.transaction = res;
+          });
         }
       } else {
-        this.transaction = "Looks like you don't have any Craniums in wallet"
+        this.transaction = 'You must use Chrome with Metamask on Desktop.';
       }
-    })
+    });
   }
 
   constructor(public contractService: ContractService) {}
@@ -60,35 +59,33 @@ export class StallionMintingComponent implements OnInit {
     });
   }
   async signTransaction() {
-    this.contractService.getTokens().then(tokens => {
-      if(tokens.length >= 1) {
-        this.contractService.signTransaction(0, tokens.length).then(res => {
-          this.transaction = res
-        })
+    this.contractService.getTokens().then((tokens) => {
+      if (tokens.length >= 1) {
+        this.contractService.signTransaction(0, tokens.length).then((res) => {
+          this.transaction = res;
+        });
       } else {
-        this.transaction = "Looks like you don't have any Craniums in wallet"
+        this.transaction = 'You must use Chrome with Metamask on Desktop.';
       }
-      
-    })
-    
+    });
   }
 
   getTokens() {
-    this.contractService.getTokens().then(tokens => {
-      alert(`[${tokens.join(", ")}]`)
-    })
+    this.contractService.getTokens().then((tokens) => {
+      alert(`[${tokens.join(', ')}]`);
+    });
   }
 
   async checkRedeemable() {
     const res = await this.contractService.isRedeemable(this.value);
-    if(typeof res === "boolean") {
-      if(res) {
-        this.transaction = "That Cranium has already redeemed a Stallion"
+    if (typeof res === 'boolean') {
+      if (res) {
+        this.transaction = 'That Cranium has already redeemed a Loot';
       } else {
-        this.transaction = "That Cranium has not redeemed a Stallion yet"
+        this.transaction = 'That Cranium has not redeemed a Loot yet';
       }
     } else {
-      this.transaction = res
+      this.transaction = res;
     }
   }
 }

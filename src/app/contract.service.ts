@@ -4,7 +4,7 @@ import {
   rinkebyAbi,
   rinkebyContract,
   rinkebyCraniumAbi,
-  rinkebyCraniumContract
+  rinkebyCraniumContract,
 } from 'src/constants';
 
 declare var Web3: any;
@@ -23,7 +23,7 @@ export class ContractService {
       to: rinkebyContract,
       from: (await this.getAccounts())[0],
       // value: (BigInt(cost) * BigInt(totalToMint.toString())).toString(16),
-      data: window.contract.methods.mintStallions(starting, totalToMint).encodeABI(),
+      data: window.contract.methods.mintLoot(starting, totalToMint).encodeABI(),
     };
     try {
       const txHash = await window.ethereum.request({
@@ -48,9 +48,12 @@ export class ContractService {
       const txHash = await window.ethereum.request({
         method: 'eth_call',
         params: [transactionParameters],
-      })
-      
-      return txHash === "0x0000000000000000000000000000000000000000000000000000000000000001" 
+      });
+
+      return (
+        txHash ===
+        '0x0000000000000000000000000000000000000000000000000000000000000001'
+      );
     } catch (error) {
       return `Something went wrong: ` + error.message;
     }
@@ -109,8 +112,6 @@ export class ContractService {
       return [];
     }
   };
-
-
 
   public getAccounts = async () => {
     try {

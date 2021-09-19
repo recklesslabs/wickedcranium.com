@@ -5,12 +5,12 @@ import { StallionMintingComponent } from './stallion-minting/stallion-minting.co
 
 const routes: Routes = [
   { path: '', component: HomePageCardsComponent },
-  { path: 'mint-stallions', component: StallionMintingComponent },
-  {path: '**', redirectTo: ''}
+  { path: 'mint-loot', component: StallionMintingComponent },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
