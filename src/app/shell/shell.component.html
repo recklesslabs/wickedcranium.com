@@ -11,9 +11,9 @@
     <mat-nav-list>
       <a
         mat-list-item
-        href="https://mint-wicked-loot.vercel.app/"
+        routerLink="wicked-cranium-gods-auction"
         (click)="drawer.close()"
-        >Mint Loot</a
+        >God Auction</a
       >
       <a
         mat-list-item
@@ -57,10 +57,11 @@
       <span class="fill-space"></span>
       <div *ngIf="!(isHandset$ | async)">
         <a
-          style="background: rgb(46, 93, 134)"
+          target="_blank"
+          style="background: rgb(52, 94, 141)"
           mat-raised-button
-          href="https://mint-wicked-loot.vercel.app/"
-          >Mint Loot</a
+          routerLink="wicked-cranium-gods-auction"
+          >God Auction</a
         >
         &nbsp;
         <a

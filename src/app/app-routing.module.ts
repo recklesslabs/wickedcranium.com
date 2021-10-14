@@ -5,7 +5,7 @@ import { StallionMintingComponent } from './stallion-minting/stallion-minting.co
 
 const routes: Routes = [
   { path: '', component: HomePageCardsComponent },
-  { path: 'mint-loot', component: StallionMintingComponent },
+  { path: 'wicked-cranium-gods-auction', component: StallionMintingComponent },
   { path: '**', redirectTo: '' },
 ];
 

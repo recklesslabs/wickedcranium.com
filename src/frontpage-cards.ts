@@ -36,6 +36,14 @@ export const frontpageCards: CardContent[] = [
     ],
   },
   {
+    titleString: 'Wicked Staking',
+    subtitleString: 'Haylos and Comic',
+    bannerPicLink: 'assets/staking.png',
+    contentString:
+      'Stake Cranium + Stallion Pairs to get a Haylos NFT! After 21 days redeem a Wicked Cranium Comic. Unstake after 28 days!',
+    craniumNumber: '19.png',
+  },
+  {
     titleString: 'The Cradle',
     subtitleString: 'An Exclusive platform for the Craniums',
     contentString:
@@ -194,7 +202,8 @@ export const frontpageCards: CardContent[] = [
     buttons: [
       {
         buttonName: 'WC X PW  OS',
-        buttonLink: 'https://opensea.io/collection/descraniums',
+        buttonLink:
+          'https://opensea.io/collection/thewickedcraniums-x-popwonder',
       },
     ],
   },
@@ -242,13 +251,5 @@ export const frontpageCards: CardContent[] = [
     contentString:
       'As a part of our initial Roadmap, custom sculptures will be mailed out to 10 Wicked Cranium owners.',
     craniumNumber: '18.png',
-  },
-  {
-    titleString: 'Upcoming: Staking and Swapping!',
-    subtitleString: 'Haylos and Comic',
-    bannerPicLink: 'assets/staking.png',
-    contentString:
-      'We are building a Staking contract to redeem a Haylos collab and a Comic page. We are also working on a swapping contract to swap 10 craniums with the same traits with a "God Cranium"',
-    craniumNumber: '19.png',
   },
 ];
