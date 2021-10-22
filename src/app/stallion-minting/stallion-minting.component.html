@@ -1,21 +1,201 @@
 <h1 style="text-align: center; font-family: Special Elite; padding-top: 10px">
-  The Wicked Cranium Gods Auction with Sandclock and UNICEF
+  The Wicked Cranium Gods Auction with Sandclock
 </h1>
 <mat-card style="margin: 10px">
-  <div style="text-align: center">
+  <!-- <div style="text-align: center">
     <p style="font-size: large">
       <img height="350px" src="../../assets/auction-banner.jpeg" />
     </p>
-  </div>
+  </div> -->
+  <mat-tab-group mat-align-tabs="center" #tabgroup>
+    <mat-tab label="Info">
+      <div style="width: 100vw; text-align: center">
+        <br />
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <div style="max-width: 450px">
+            <p>
+              There is chaos all over Osseous and all hell has broken loose. The
+              Gods had to be summoned but there is a caveat. Someone else also
+              managed to listen to their prayers. WATCH FOR WHAT IS ABOUT TO
+              UNVEIL!
+            </p>
+
+            <p>
+              The Gods have come to help various charities across the world.
+              Each of them have been assigned to one charity and will be
+              auctioned off. All funds raised will be donated.
+            </p>
+
+            <p>
+              The auction will be hosted in October 2021 and the venue is
+              NiftyGateway for now.
+            </p>
+
+            <p>There are four Gods - Earth, Fire, Water, Air.</p>
+
+            <p>
+              <button
+                (click)="changeIndex(tabgroup, 1)"
+                style="color: rgb(188, 114, 231)"
+                mat-raised-button
+              >
+                Mercy Corps
+              </button>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <button
+                (click)="changeIndex(tabgroup, 2)"
+                style="color: rgb(188, 114, 231)"
+                mat-raised-button
+              >
+                Acumen
+              </button>
+              &nbsp;&nbsp; &nbsp;&nbsp;
+              <button
+                (click)="changeIndex(tabgroup, 3)"
+                style="color: rgb(188, 114, 231)"
+                mat-raised-button
+              >
+                UNICEF
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Mercy Corps">
+      <div style="width: 100vw; text-align: center">
+        <br />
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <div style="max-width: 450px">
+            <p>
+              Mercy Corps is a global team of 5,600 humanitarians working to
+              create a world where everyone can prosper. With presence in more
+              than 40 countries, Mercy Corp works alongside people living
+              through conflict, poverty and disaster. This year alone, Mercy
+              Corps reached more than 50 million people all over the world with
+              lifesaving and life-changing assistance.
+            </p>
+            <p>
+              Funds from the auction of the Wicked Craniums Air God will help
+              ensure that when disasters strike, Mercy Corps teams can be there
+              to help meet survivors with compassion and deliver critically
+              needed supplies, like food, clean water, shelter supplies and cash
+              support.
+            </p>
+            <p>
+              Twitter:
+              <a
+                style="color: rgb(188, 114, 231)"
+                href="https://twitter.com/mercycorps"
+                >https://twitter.com/mercycorps</a
+              >
+            </p>
+            <p><button mat-raised-button disabled>Live Auction Page</button></p>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Acumen">
+      <div style="width: 100vw; text-align: center">
+        <br />
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <div style="max-width: 450px">
+            <p>
+              Acumen is a nonprofit, social impact venture fund that invests in
+              entrepreneurial solutions to the toughest problems of poverty.
+              Acumen hopes to end energy poverty in the next decade so that
+              everyone can live a life of dignity.
+            </p>
+            <p>
+              For the 230 million people without energy in Ethiopia, Liberia,
+              Tanzania, Nigeria, Kenya, and Ghana, and the more than 750 million
+              people without access worldwide, energy has transformative
+              potential and funds from the auction of the Wicked Craniums Fire
+              God will help ensure Acumen continue to serve those in need of
+              access to energy.
+            </p>
+            <p>
+              Twitter:
+              <a
+                style="color: rgb(188, 114, 231)"
+                href="https://twitter.com/Acumen"
+                >https://twitter.com/Acumen</a
+              >
+            </p>
+            <p><button mat-raised-button disabled>Live Auction Page</button></p>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="UNICEF">
+      <div style="width: 100vw; text-align: center">
+        <br />
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <div style="max-width: 450px">
+            <p>
+              UNICEF, also known as the United Nations Children's Fund, is a
+              United Nations agency responsible for providing humanitarian and
+              developmental aid to children worldwide. The agency is among the
+              most widespread and recognizable social welfare organizations in
+              the world, with a presence in 192 countries and territories.
+            </p>
+            <p>
+              UNICEF India works in 17 States to protect and strengthen the
+              resilience of children and their families, and to help them cope
+              with adversity during and after a crisis as well as contribute to
+              their adequate mental health and well-being. Proceeds from the
+              Earth God will be donated to UNICEF India, so they could continue
+              to promote mental health initiatives across India.
+            </p>
+            <p>
+              Twitter:
+              <a
+                style="color: rgb(188, 114, 231)"
+                href="https://twitter.com/UNICEFIndia"
+                >https://twitter.com/UNICEFIndia</a
+              >
+            </p>
+            <p><button mat-raised-button disabled>Live Auction Page</button></p>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
 </mat-card>
 
 <mat-tab-group mat-align-tabs="center">
-  <mat-tab label="Info">
-    <div style="width: 100vw; text-align: center">
-      <br />
-      <p>Coming Soon!</p>
-    </div>
-  </mat-tab>
   <mat-tab label="Earth God">
     <div style="width: 100vw; text-align: center">
       <mat-card>
@@ -38,11 +218,3 @@
     </div>
   </mat-tab>
 </mat-tab-group>
-
-<!-- <mat-card style="margin: 100px">
-  <div style="text-align: center">
-    <p style="font-size: large">
-      <img src="../../assets/airgod.jpeg" />
-    </p>
-  </div>
-</mat-card> -->

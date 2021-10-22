@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatTabGroup } from '@angular/material/tabs/tab-group';
 import { ContractService } from '../contract.service';
 
 @Component({
@@ -7,6 +8,10 @@ import { ContractService } from '../contract.service';
   styleUrls: ['./stallion-minting.component.scss'],
 })
 export class StallionMintingComponent implements OnInit {
+  changeIndex(tabgroup: MatTabGroup, number: number) {
+    tabgroup.selectedIndex = number;
+  }
+
   value = Math.floor(Math.random() * (10761 + 1));
   min = 0;
   max = 10761;
