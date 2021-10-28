@@ -36,6 +36,25 @@ export const frontpageCards: CardContent[] = [
     ],
   },
   {
+    titleString: 'God Auction',
+    subtitleString: '4 Wicked Cranium Gods',
+    bannerPicLink: 'assets/god-auction.png',
+    contentString:
+      'The Gods have come to help various charities across the world. Each of them have been assigned to one charity and will be auctioned off. All funds raised will be donated.',
+    craniumNumber: '38.png',
+    buttons: [
+      {
+        buttonName: 'Info',
+        buttonLink: 'https://wickedcranium.com/wicked-cranium-gods-auction',
+      },
+      {
+        buttonName: 'Auction',
+        buttonLink:
+          'https://niftygateway.com/collections/wickedcraniumauctions',
+      },
+    ],
+  },
+  {
     titleString: 'Wicked Staking',
     subtitleString: 'Haylos and Comic',
     bannerPicLink: 'assets/staking.png',

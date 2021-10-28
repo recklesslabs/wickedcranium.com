@@ -49,7 +49,7 @@
               >
                 Mercy Corps
               </button>
-              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;
               <button
                 (click)="changeIndex(tabgroup, 2)"
                 style="color: rgb(188, 114, 231)"
@@ -57,13 +57,21 @@
               >
                 Acumen
               </button>
-              &nbsp;&nbsp; &nbsp;&nbsp;
+              &nbsp;&nbsp; &nbsp;
               <button
                 (click)="changeIndex(tabgroup, 3)"
                 style="color: rgb(188, 114, 231)"
                 mat-raised-button
               >
                 UNICEF
+              </button>
+              &nbsp;&nbsp;&nbsp;
+              <button
+                (click)="changeIndex(tabgroup, 4)"
+                style="color: rgb(188, 114, 231)"
+                mat-raised-button
+              >
+                HFI
               </button>
             </p>
           </div>
@@ -106,7 +114,15 @@
                 >https://twitter.com/mercycorps</a
               >
             </p>
-            <p><button mat-raised-button disabled>Live Auction Page</button></p>
+            <p>
+              <a
+                mat-raised-button
+                href="https://niftygateway.com/collections/wickedcraniumauctions"
+                target="_blank"
+              >
+                Live Auction Page
+              </a>
+            </p>
           </div>
         </div>
       </div>
@@ -146,7 +162,15 @@
                 >https://twitter.com/Acumen</a
               >
             </p>
-            <p><button mat-raised-button disabled>Live Auction Page</button></p>
+            <p>
+              <a
+                mat-raised-button
+                href="https://niftygateway.com/collections/wickedcraniumauctions"
+                target="_blank"
+              >
+                Live Auction Page
+              </a>
+            </p>
           </div>
         </div>
       </div>
@@ -188,6 +212,56 @@
               >
             </p>
             <!-- <p><button mat-raised-button disabled>Live Auction Page</button></p> -->
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="HFI">
+      <div style="width: 100vw; text-align: center">
+        <br />
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <div style="max-width: 450px">
+            <p>
+              The Health Finance Institute (HFI) is a US-based non-profit
+              organization that aims to design, catalyze, test, and scale novel
+              financing instruments and pathways for noncommunicable diseases,
+              or NCDs (diabetes, heart disease, cancer, chronic obstructive
+              pulmonary disease, and mental health), with an ultimate goal of
+              accelerating the expansion of fiscal space for NCDs globally.
+            </p>
+            <p>
+              At the heart of HFI’s mission is that nobody chooses disease, as
+              research shows that NCDs stem from a range of environmental and
+              societal, social determinants, and biological factors, and HFI
+              recognizes the severe economic burden that NCDs have on a global
+              economy.
+            </p>
+            <p>
+              Twitter:
+              <a
+                style="color: rgb(188, 114, 231)"
+                href="https://twitter.com/UNICEFIndia"
+                >https://twitter.com/UNICEFIndia</a
+              >
+            </p>
+            <p>
+              <a
+                mat-raised-button
+                href="https://niftygateway.com/collections/wickedcraniumauctions"
+                target="_blank"
+              >
+                Live Auction Page
+              </a>
+            </p>
           </div>
         </div>
       </div>
