@@ -1,12 +1,3 @@
-# wickedcranium.com
+# Deprecated!
 
-The Github repository for [wickedcranium.com](https://wickedcranium.com). 
-Angular + Angular Material was used to build this. 
-
-**TODO**:
-
-- Add a route for user cards.
-- Show how users may add their own cards.
-
-- Link recklesslabs Github from the website
-- Resize and compress images in assets/
+This website has now been deprecated in favor of the [Wicked Cranium 2.0 website](wickedcranium.com). No new changes are expected to land.
